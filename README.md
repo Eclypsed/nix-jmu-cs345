@@ -1,4 +1,4 @@
-A nixos module for installing a pre-configured development environment for JMU's CS345
+A pre-configured development environment for JMU's CS345
 ## Setup
 ### Using flakes
 Inside your main `flake.nix`
@@ -7,14 +7,17 @@ Inside your main `flake.nix`
   description = "System Configuration Flake";
 
   inputs = {
+    # ...
     nix-jmu-cs345.url = "github:Eclypsed/nix-jmu-cs345/main";
   };
 
-  outputs = { nix-jmu-cs345, ... }@inputs: {
+  outputs = { nixpkgs, nix-jmu-cs345, ... }@inputs: {
     nixosConfigurations = {
+      # replace <your-hostname> with your actual hostname
       <your-hostname> = nixpkgs.lib.nixosSystem {
         # ...
         modules = [
+          # ...
           nix-jmu-cs345.nixosModules.bernstdh
         ];
       };
