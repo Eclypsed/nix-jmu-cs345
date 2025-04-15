@@ -7,7 +7,7 @@ Inside your main `flake.nix`
   description = "System Configuration Flake";
 
   inputs = {
-    nix-jmu-cs345.url = "githib:Eclypsed/nix-jmu-cs345/main";
+    nix-jmu-cs345.url = "github:Eclypsed/nix-jmu-cs345/main";
   };
 
   outputs = { nix-jmu-cs345, ... }@inputs: {
