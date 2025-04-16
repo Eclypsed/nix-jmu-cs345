@@ -3,7 +3,11 @@
 
   outputs = _: {
     nixosModules = {
-      bernstdh = import ./modules;
+      bernstdh = import ./modules/nixos.nix;
+    };
+
+    homeManagerModules = {
+      bernstdh = import ./modules/homeManager.nix;
     };
   };
 }
