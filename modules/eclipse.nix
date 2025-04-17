@@ -20,7 +20,8 @@ let
     name = "checkstyle-v10.17";
     src = ../plugins/checkstyle-v10.17;
   };
-
+in
+{
   # A custom derivation of Eclipse with CS345's requirements.
   eclipse-cs345 = eclipseWithPlugins {
     eclipse = eclipse-v2024-06;
@@ -29,8 +30,4 @@ let
       plugins.color-theme
     ];
   };
-
-in
-{
-  inherit eclipse-cs345;
 }

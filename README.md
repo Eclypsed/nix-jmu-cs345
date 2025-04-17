@@ -1,4 +1,4 @@
-A nixos module for installing a pre-configured development environment for JMU's CS345
+A nixos module for installing a pre-configured development environment for JMU's CS345 on NixOS
 ## Setup
 ### Using flakes
 Inside your main `flake.nix`
@@ -22,7 +22,9 @@ Inside your main `flake.nix`
   };
 }
 ```
-Then, in your `configuraiton.nix` (or whichever nix file you please)
+For use in home-manager, import `nix-jmu-cs345.homeManagerModules.bernstdh` in your `home.nix` instead.
+
+Then, in your configuration, enable the environment.
 ```nix
 programs.nix-jmu-cs345.enable = true;
 ```
