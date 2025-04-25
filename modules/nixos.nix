@@ -16,7 +16,7 @@ with lib;
 
   config = mkIf config.programs.nix-jmu-cs345.enable {
     environment.systemPackages = with pkgs; [
-      jdk21_headless
+      jdk
       eclipse-cs345
     ];
   };
